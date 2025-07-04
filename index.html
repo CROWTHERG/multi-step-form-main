@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="steps">
+          <div class="step active" data-step="1">
+            <div class="number">1</div>
+            <div class="step-info">
+              <p class="step-title">STEP 1</p>
+              <p class="step-desc">Your Info</p>
+            </div>
+          </div>
+          <div class="step" data-step="2">
+            <div class="number">2</div>
+            <div class="step-info">
+              <p class="step-title">STEP 2</p>
+              <p class="step-desc">Select Plan</p>
+            </div>
+          </div>
+          <div class="step" data-step="3">
+            <div class="number">3</div>
+            <div class="step-info">
+              <p class="step-title">STEP 3</p>
+              <p class="step-desc">Add-Ons</p>
+            </div>
+          </div>
+          <div class="step" data-step="4">
+            <div class="number">4</div>
+            <div class="step-info">
+              <p class="step-title">STEP 4</p>
+              <p class="step-desc">Summary</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Form content -->
+      <main class="form-container">
+        <form id="multiStepForm">
+          <!-- Step 1 -->
+          <section class="form-step active" data-step="1">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="e.g. Stephen King" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required />
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required />
+            </div>
+          </section>
+
+          <!-- Step 2 -->
+          <section class="form-step" data-step="2">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+            <div class="plans">
+              <div class="plan active" data-plan="Arcade">
+                <div class="icon">🎮</div>
+                <div>
+                  <h2>Arcade</h2>
+                  <p>$9/mo</p>
+                </div>
+              </div>
+              <div class="plan" data-plan="Advanced">
+                <div class="icon">🕹️</div>
+                <div>
+                  <h2>Advanced</h2>
+                  <p>$12/mo</p>
+                </div>
+              </div>
+              <div class="plan" data-plan="Pro">
+                <div class="icon">👑</div>
+                <div>
+                  <h2>Pro</h2>
+                  <p>$15/mo</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 3 -->
+          <section class="form-step" data-step="3">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <div class="addons">
+              <label><input type="checkbox" value="Online Service" /> Online Service</label>
+              <label><input type="checkbox" value="Larger Storage" /> Larger Storage</label>
+              <label><input type="checkbox" value="Customizable Profile" /> Customizable Profile</label>
+            </div>
+          </section>
+
+          <!-- Step 4 -->
+          <section class="form-step" data-step="4">
+            <h1>Summary</h1>
+            <p>Double-check everything looks OK before confirming.</p>
+            <div id="summary" class="summary-box"></div>
+          </section>
+
+          <!-- Navigation Buttons -->
+          <div class="navigation">
+            <button type="button" id="backBtn" class="hidden">Go Back</button>
+            <button type="button" id="nextBtn">Next Step</button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> <br>
+    Coded by <a href="https://crowther-webdev.netlify.app">CROWTHER</a>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
