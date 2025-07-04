@@ -219,3 +219,50 @@ button.hidden {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
 }
+
+/* ===== Responsive Mobile Layout ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    background: url('mobile-bg.png') no-repeat center/cover;
+    border-radius: 0;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    opacity: 1;
+  }
+
+  .number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .navigation {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
